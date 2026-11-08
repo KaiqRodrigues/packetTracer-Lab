@@ -1,6 +1,18 @@
+VLSM (Variable Length Subnet Mask)
+VLAN (Virtual LAN)
+OSPF Multi-Area
+DHCP (Dynamic Host Configuration Protocol)
+DNS Server
+Wireless Access Point (AP)
+Roteamento estático
+Rota padrão (Default Route)
+Trunk (IEEE 802.1Q)
+
 LAN 1 - AREA 1(ospf):
 VLAN + VLSM + DHCP
-Dividi a rede 192.168.1.0 em 3 subredes utilizando VLSM e atribui cada um em uma VLAN e atribui os ips com pools de DHCP.
+Dividi a rede 192.168.1.0 em 3 subredes utilizando VLSM e atribui cada um em uma VLAN;
+Atribui os ips com pools de DHCP;
+Interface TrunkMode entre os SW e o Gateway
 <img width="576" height="592" alt="Captura de tela 2026-11-08 115900" src="https://github.com/user-attachments/assets/acb46091-8c4f-4dc3-90ec-10942ca630de" />
 
 VLAN 10 - 100 Dispositivos
@@ -21,8 +33,12 @@ Laptops conectados em um AP e um Servidor DHCP fazendo a atribuição de ips.
 BACKBONE - AREA 0(ospf):
 Dois rt ABR intermediados por um Switch de camada 2. 
 <img width="320" height="590" alt="Captura de tela 2026-11-08 115925" src="https://github.com/user-attachments/assets/73fc24f1-84f1-42bd-9c28-93beacf4ac7b" />
-Obs:
-Apenas suas portas internas viradas para o SW estão na Area 0 do OSPF.
+Obs: Apenas suas portas internas viradas para o SW estão na Area 0 do OSPF.
 Anunciado por todos os RT, a comunicação ocorre sem problemas.
+
+SERVIDOR DNS:
+Conectei um servidor com DNS configurado Registro A: www.teste.com e coloquei como padrão no servidores DHCP das Lans.
+200.200.200.2
+
 Durante os testes de conectividade entre as LANs, identifiquei um comportamente do tempo de convergência do OSPF no Packet Tracer: Ao pingar um pc da rede lan 1 por um pc da lan 2, recebi o "host nao acessivel". 
 Procurei no running-config de cada dispositivo mas não encontrei. Depois passei o tempo da simulação, a tabela de roteamento de cada um foi atualizada e a conectividade ponta a ponta ocorreu sem problemas.
