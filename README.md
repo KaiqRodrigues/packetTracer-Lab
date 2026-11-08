@@ -1,6 +1,3 @@
-# Laboratório de Redes — Packet Tracer
-
-## Tecnologias e conceitos utilizados
 
 - VLSM (Variable Length Subnet Mask)
 - VLAN (Virtual LAN)
@@ -18,9 +15,9 @@
 
 ### VLAN + VLSM + DHCP
 
-- Dividi a rede `192.168.1.0` em 3 subredes utilizando VLSM e atribui cada um em uma VLAN;
-- Atribui os ips com pools de DHCP;
-- Interface TrunkMode entre os SW e o Gateway.
+Dividi a rede 192.168.1.0 em 3 subredes utilizando VLSM e atribui cada um em uma VLAN;
+Atribui os ips com pools de DHCP;
+Interface TrunkMode entre os SW e o Gateway.
 
 ![LAN 1](https://github.com/user-attachments/assets/acb46091-8c4f-4dc3-90ec-10942ca630de)
 
@@ -49,7 +46,6 @@ Dois rt ABR intermediados por um Switch de camada 2.
 ![BACKBONE](https://github.com/user-attachments/assets/73fc24f1-84f1-42bd-9c28-93beacf4ac7b)
 
 **Obs:** Apenas suas portas internas viradas para o SW estão na Area 0 do OSPF.
-
 Anunciado por todos os RT, a comunicação ocorre sem problemas.
 
 ---
@@ -57,8 +53,7 @@ Anunciado por todos os RT, a comunicação ocorre sem problemas.
 ## SERVIDOR DNS
 
 Conectei um servidor com DNS configurado Registro A: `www.teste.com` e coloquei como padrão no servidores DHCP das Lans.
-
-**IP:** `200.200.200.2`
+IP:200.200.200.2
 
 ---
 
